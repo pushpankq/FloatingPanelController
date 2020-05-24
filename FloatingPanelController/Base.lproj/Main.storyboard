@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FloatingPanelController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pDa-do-gRD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pDa-do-gRD" secondAttribute="bottom" id="3Ad-hG-z18"/>
+                            <constraint firstItem="pDa-do-gRD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TBn-1E-2ro"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pDa-do-gRD" secondAttribute="trailing" id="WbS-tD-sUE"/>
+                            <constraint firstItem="pDa-do-gRD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lD1-HV-Qfr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236" y="117"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="epo-UC-KGc">
+            <objects>
+                <viewController storyboardIdentifier="fpc_content" id="zEA-bT-Dw6" customClass="ContentViewController" customModule="FloatingPanelController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oVi-mg-GRs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vqr-kZ-9CK">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vqr-kZ-9CK" firstAttribute="top" secondItem="n91-VZ-R90" secondAttribute="top" constant="50" id="9Qi-aE-dr8"/>
+                            <constraint firstItem="Vqr-kZ-9CK" firstAttribute="leading" secondItem="n91-VZ-R90" secondAttribute="leading" id="JrQ-03-WBB"/>
+                            <constraint firstItem="n91-VZ-R90" firstAttribute="trailing" secondItem="Vqr-kZ-9CK" secondAttribute="trailing" id="T5s-76-RDD"/>
+                            <constraint firstItem="n91-VZ-R90" firstAttribute="bottom" secondItem="Vqr-kZ-9CK" secondAttribute="bottom" id="oMA-Me-V7Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n91-VZ-R90"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Vqr-kZ-9CK" id="cC5-qJ-Stb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTw-DQ-nj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535" y="117"/>
+        </scene>
+    </scenes>
+</document>
